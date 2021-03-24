@@ -1,7 +1,11 @@
 import React from "react";
 import { TTodoListProps } from ".";
 
-export const ToDoList: React.FC<TTodoListProps> = ({ todos }) => {
+export const ToDoList: React.FC<TTodoListProps> = ({
+  todos,
+  onToggle,
+  onRemove,
+}) => {
   return (
     <ul>
       {todos.map((todo) => {
@@ -12,9 +16,18 @@ export const ToDoList: React.FC<TTodoListProps> = ({ todos }) => {
         return (
           <li className={classes.join("")} key={todo.id}>
             <label>
-              <input type="checkbox" checked={todo.completed} />
+              <input
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => onToggle(todo.id)}
+              />
               <span>{todo.title}</span>
-              <i className="material-icons red-text">delete</i>
+              <i
+                onClick={() => onRemove(todo.id)}
+                className="material-icons red-text"
+              >
+                delete
+              </i>
             </label>
           </li>
         );

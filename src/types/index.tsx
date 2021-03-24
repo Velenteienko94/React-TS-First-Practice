@@ -3,3 +3,5 @@ export type TTodo = {
   id: number;
   completed: boolean;
 };
+
+// CREATE TODO LIST ITEM COMPONENT AND PROVIDE TTodoItemProps TYPE
