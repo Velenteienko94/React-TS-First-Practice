@@ -1,0 +1,23 @@
+.person {
+  border: 5px solid whitesmoke;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 5px 5px gray;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+
+.btn:hover {
+  background-color: rgba(238, 189, 189, 0.616);
+  box-shadow: 1px 1px 1px 1px rgba(226, 120, 120, 0.596);
+}
